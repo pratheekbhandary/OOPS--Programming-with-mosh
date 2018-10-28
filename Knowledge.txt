@@ -1,0 +1,50 @@
+Value Types (6) //Primitives
+Number 
+String
+Boolean
+Symbol
+undefined
+null
+
+Reference Types //Objects 
+Object
+Function
+Array
+
+
+Closures excersize
+        const log=(...x)=>console.log(...x);
+        function Circle(radius){
+            this.radius=radius;
+            let defaultLocaton=1;
+
+            this.draw=function(){
+                
+                debugger;
+                log('draw');
+                let xDarw=defaultLocaton;
+                log('xDarw',xDarw++)
+                this.innerInnerFuncion=function(){
+                    let x=defaultLocaton;
+                    xDarw++
+                    debugger;
+                }
+                this.innerInnerFuncion2=function(){
+                    debugger;
+                }
+            }
+
+            this.draw2=function(){
+                debugger;
+                log('draw');
+                let xDraw2=defaultLocaton;
+                log('xDraw2',xDraw2)
+            }
+        }
+        let x=new Circle(1);
+        x.draw()
+        x.draw2()
+        log(x)
+
+
+
